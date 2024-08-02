@@ -18,5 +18,5 @@ The Calculator is a simple yet functional WPF-based application designed to perf
 
 Clone the repository and open the project in Visual Studio. Build and run the application to start using the calculator.
 
-![Video](https://github.com/user-attachments/assets/6fb8e480-403f-46df-9d27-a55cee75b99c)
+https://github.com/user-attachments/assets/6fb8e480-403f-46df-9d27-a55cee75b99c
 

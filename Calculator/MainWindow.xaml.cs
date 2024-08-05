@@ -38,8 +38,7 @@ namespace Calculator
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string str = (string)((Button)e.OriginalSource).Content;
-
-
+   
             if (str == "AC")
                 textLabel1.Text = "";
             else if (str == "DEL")
@@ -62,21 +61,25 @@ namespace Calculator
                 {
                     textLabel1.Text = "";
                 }
-
+            }
+            else if (IsOperator(str))
+            {
+                if (textLabel1.Text.Length == 0 || IsOperator(textLabel1.Text.Last().ToString()))
+                {
+                    return;
+                }
+                else
+                {
+                    textLabel1.Text += str;
+                }
             }
             else
                 textLabel1.Text += str;
-
-            /*if (textLabel1.Text.Length < MaxInputLength)
-            {
-                textLabel1.Text += str;
-            }
-            */
-            //
-
-
-
-
+        }
+        private bool IsOperator(string input)
+        {
+            return input == "+" || input == "-" || input == "*" || input == "/" || input == "%";
         }
     }
 }
+
